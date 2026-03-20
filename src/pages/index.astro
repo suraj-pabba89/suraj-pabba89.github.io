@@ -1,0 +1,252 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SkySection from '../components/SkySection.astro';
+
+const projects = [
+  {
+    name: "Benchmark",
+    description: "An operating system for sales engineers. Ingested meeting transcripts and CRM data to surface actionable insights, coaching signals, and reporting — built for the people who live in the demo.",
+    tags: ["LLMs", "CRM", "API", "Sales Engineering"],
+    status: "Startup",
+    link: null,
+    github: null,
+  },
+  {
+    name: "InField",
+    description: "Machine learning for skilled labor. Gave field technicians an LLM-powered assistant to guide equipment installation in real time — reducing errors and training time on the job.",
+    tags: ["LLMs", "Machine Learning", "Field Ops", "Antler VC"],
+    status: "Startup",
+    link: null,
+    github: null,
+  },
+];
+
+const experience = [
+  {
+    company: "CNA Financial",
+    title: "Data and AI Consultant",
+    period: "2025 – Present",
+    highlights: [
+      "Building AI and operational capabilities across claims, actuarial, and underwriting business units at a Fortune 500 insurer",
+      "Architecting a data exchange to unify data flows across internal teams and external partners",
+      "Evaluating and integrating insurtech startups into the enterprise technology ecosystem"
+    ]
+  },
+  {
+    company: "Treehouse",
+    title: "Director of Technical Operations",
+    period: "2024 – 2025",
+    highlights: [
+      "Built AI-driven process automation reducing manual ops overhead across field and office teams",
+      "Engineered HubSpot + Zapier automations that drove 110% of quota in Q4 2024",
+      "Integrated field service APIs, CRM, and performance tooling to unify operations"
+    ]
+  },
+  {
+    company: "Independent Consultant",
+    title: "Startups & Antler VC Portfolio",
+    period: "2022 – 2024",
+    highlights: [
+      "Selected for Antler VC NYC EIR program (6% acceptance rate); built InField AI",
+      "Supported portfolio companies on data architecture, AI integration, and growth",
+      "Helped a renewable tax credit startup establish sales processes, leading to an $800K raise"
+    ]
+  },
+  {
+    company: "Salesforce / MuleSoft",
+    title: "Senior Client Solutions Engineer",
+    period: "2021 – 2022",
+    highlights: [
+      "Led enterprise presales for Anypoint Platform across Salesforce's HLS operating unit",
+      "Built POCs and demos for API development, governance, and security use cases",
+      "Managed $2M book of business"
+    ]
+  },
+  {
+    company: "project44",
+    title: "Senior Solutions Engineer",
+    period: "2021 – 2022",
+    highlights: [
+      "Drove technical sales for a supply chain visibility platform serving global logistics enterprises"
+    ]
+  },
+  {
+    company: "iManage",
+    title: "Solutions Engineer",
+    period: "2018 – 2021",
+    highlights: [
+      "Owned technical presales for legal and financial content management platform"
+    ]
+  },
+  {
+    company: "Uptake",
+    title: "Solutions Engineer",
+    period: "2016 – 2018",
+    highlights: [
+      "Early employee at AI-for-heavy-industries startup; built and ran POCs for industrial IoT and predictive analytics"
+    ]
+  },
+];
+
+const writing = [
+  {
+    title: "What enterprises actually need from AI (and why most vendors miss it)",
+    description: "15 years of POCs taught me that the gap isn't the technology — it's the integration story.",
+  },
+  {
+    title: "The SE's unfair advantage in AI product building",
+    description: "Solutions engineers have seen more real customer problems than almost anyone. Here's how to use that.",
+  },
+  {
+    title: "From POC to production: why most demos never ship",
+    description: "I've built hundreds of proofs of concept. Most died in procurement. Here's why — and how to fix it.",
+  },
+];
+---
+
+<Layout>
+
+  <!-- Sky: fixed background layer, sits behind everything -->
+  <SkySection />
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/30">
+    <div class="max-w-5xl mx-auto px-8 py-4 flex justify-between items-center">
+      <a href="/" class="font-['Cormorant_Garamond'] text-xl font-medium tracking-wide text-white drop-shadow">
+        Suraj Pabba
+      </a>
+      <div class="flex items-center gap-8 text-sm font-light tracking-wide text-white/90">
+        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+        <a href="#writing" class="hover:text-white transition-colors">Writing</a>
+        <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+        <a href="mailto:hello@surajpabba.com" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero: transparent over the sky -->
+    <section class="min-h-screen flex flex-col justify-center px-8 pt-24 pb-20 max-w-5xl mx-auto">
+      <p class="text-sm tracking-[0.2em] uppercase text-white/70 font-light mb-8">Chicago, IL</p>
+      <h1 class="font-['Cormorant_Garamond'] text-8xl md:text-9xl font-light leading-[0.88] text-white drop-shadow-lg mb-10">
+        I ship<br /><em>things.</em>
+      </h1>
+      <p class="text-xl font-light text-white/80 max-w-xl leading-relaxed mb-14" style="text-shadow: 0 1px 4px rgba(0,0,0,0.2)">
+        I spent a decade closing enterprise deals and building POCs.
+        Now I build the products I always wished existed — with AI, for real problems I've lived firsthand.
+      </p>
+      <div class="flex flex-wrap items-center gap-8 text-sm text-white/70">
+        <a href="mailto:hello@surajpabba.com" class="hover:text-white transition-colors border-b border-white/30 hover:border-white pb-px">
+          hello@surajpabba.com
+        </a>
+        <a href="https://github.com/suraj-pabba89" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/surajpabba" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+        <a href="https://cal.com/surajpabba" target="_blank" class="hover:text-white transition-colors">Book a call</a>
+      </div>
+    </section>
+
+    <!-- Projects: cream panel -->
+    <section id="projects" class="bg-[#F9F8F4]/92 backdrop-blur-sm">
+      <div class="max-w-5xl mx-auto px-8 py-24">
+        <p class="text-sm tracking-[0.2em] uppercase text-black font-light mb-4">Work</p>
+        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-black mb-16">Projects</h2>
+        <div class="space-y-0">
+          {projects.map((project) => (
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 py-10 border-t border-[#E2E1DC]">
+              <div class="flex items-start justify-between md:flex-col md:gap-4">
+                <h3 class="font-['Cormorant_Garamond'] text-3xl font-light text-black">
+                  {project.name}
+                </h3>
+                <span class="text-xs tracking-widest uppercase font-light px-2 py-1 border border-[#E2E1DC] text-black">
+                  {project.status}
+                </span>
+              </div>
+              <div>
+                <p class="text-black font-light leading-relaxed mb-6">{project.description}</p>
+                <div class="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span class="text-xs tracking-wide text-black border border-[#E2E1DC] px-3 py-1">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Writing: cream panel -->
+    <section id="writing" class="bg-[#F9F8F4]/92 backdrop-blur-sm">
+      <div class="max-w-5xl mx-auto px-8 py-24">
+        <p class="text-sm tracking-[0.2em] uppercase text-black font-light mb-4">Thinking</p>
+        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-black mb-4">Writing</h2>
+        <p class="text-black font-light mb-16 max-w-xl">
+          Notes on enterprise software, AI implementation, and what it actually takes to ship things that work at scale.
+        </p>
+        <div class="space-y-0">
+          {writing.map((post) => (
+            <div class="py-8 border-t border-[#E2E1DC] grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4 items-start">
+              <div>
+                <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-black mb-2 leading-snug">
+                  {post.title}
+                </h3>
+                <p class="text-sm text-black font-light leading-relaxed">{post.description}</p>
+              </div>
+              <div class="flex md:justify-end">
+                <span class="text-xs tracking-widest uppercase font-light text-black border border-[#E2E1DC] px-2 py-1 self-start">
+                  Upcoming
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience: cream panel -->
+    <section id="experience" class="bg-[#F9F8F4]/92 backdrop-blur-sm">
+      <div class="max-w-5xl mx-auto px-8 py-24">
+        <p class="text-sm tracking-[0.2em] uppercase text-black font-light mb-4">Background</p>
+        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-black mb-16">Experience</h2>
+        <div class="space-y-0">
+          {experience.map((job) => (
+            <div class="py-10 border-t border-[#E2E1DC] grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6">
+              <div class="md:pt-1">
+                <p class="text-xs tracking-wide text-black font-light">{job.period}</p>
+              </div>
+              <div>
+                <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-black mb-1">{job.company}</h3>
+                <p class="text-sm text-black font-light mb-4">{job.title}</p>
+                <ul class="space-y-2">
+                  {job.highlights.map((h) => (
+                    <li class="text-sm text-black font-light leading-relaxed flex gap-3">
+                      <span class="text-black mt-1.5 shrink-0">—</span>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#F9F8F4]/92 backdrop-blur-sm border-t border-[#E2E1DC]">
+      <div class="max-w-5xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <p class="font-['Cormorant_Garamond'] text-xl font-light text-black">Suraj Pabba</p>
+        <div class="flex flex-wrap gap-6 text-sm text-black font-light">
+          <a href="mailto:hello@surajpabba.com" class="hover:text-black transition-colors">Email</a>
+          <a href="https://github.com/suraj-pabba89" target="_blank" class="hover:text-black transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/surajpabba" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
+          <a href="https://x.com/surajpabba" target="_blank" class="hover:text-black transition-colors">X</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</Layout>
