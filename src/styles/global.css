@@ -10,13 +10,31 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
-  color: #000;
+  color: #1C1C1A;
+  background-color: #F9F8F4;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Force dark text on all content — prevents Tailwind v4 / OS dark-mode cascade */
+nav,
+main,
+nav *,
+main * {
+  color: inherit;
+}
+
+nav {
+  color: #1C1C1A;
+}
+
+main {
+  color: #1C1C1A;
 }
 
 h1, h2, h3, h4 {
@@ -82,7 +100,6 @@ h1, h2, h3, h4 {
 main {
   position: relative;
   z-index: 1;
-  color: #000;
 }
 
 /* Content sections get a soft cream background so text is legible */
