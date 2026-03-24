@@ -149,24 +149,24 @@ const writing = [
     <!-- Projects: cream panel -->
     <section id="projects" class="bg-[#F9F8F4]/92 backdrop-blur-sm">
       <div class="max-w-5xl mx-auto px-8 py-24">
-        <p class="text-sm tracking-[0.2em] uppercase text-black font-light mb-4">Work</p>
-        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-black mb-16">Projects</h2>
+        <p class="text-xs tracking-[0.2em] uppercase text-[#6B6B68] font-light mb-4">Work</p>
+        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-[#1C1C1A] mb-16">Projects</h2>
         <div class="space-y-0">
           {projects.map((project) => (
             <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 py-10 border-t border-[#E2E1DC]">
               <div class="flex items-start justify-between md:flex-col md:gap-4">
-                <h3 class="font-['Cormorant_Garamond'] text-3xl font-light text-black">
+                <h3 class="font-['Cormorant_Garamond'] text-3xl font-light text-[#1C1C1A]">
                   {project.name}
                 </h3>
-                <span class="text-xs tracking-widest uppercase font-light px-2 py-1 border border-[#E2E1DC] text-black">
+                <span class="text-xs tracking-widest uppercase font-light px-2 py-1 border border-[#E2E1DC] text-[#6B6B68]">
                   {project.status}
                 </span>
               </div>
               <div>
-                <p class="text-black font-light leading-relaxed mb-6">{project.description}</p>
+                <p class="text-[#6B6B68] font-light leading-relaxed mb-6">{project.description}</p>
                 <div class="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span class="text-xs tracking-wide text-black border border-[#E2E1DC] px-3 py-1">
+                    <span class="text-xs tracking-wide text-[#6B6B68] border border-[#E2E1DC] px-3 py-1">
                       {tag}
                     </span>
                   ))}
@@ -181,22 +181,22 @@ const writing = [
     <!-- Writing: cream panel -->
     <section id="writing" class="bg-[#F9F8F4]/92 backdrop-blur-sm">
       <div class="max-w-5xl mx-auto px-8 py-24">
-        <p class="text-sm tracking-[0.2em] uppercase text-black font-light mb-4">Thinking</p>
-        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-black mb-4">Writing</h2>
-        <p class="text-black font-light mb-16 max-w-xl">
+        <p class="text-xs tracking-[0.2em] uppercase text-[#6B6B68] font-light mb-4">Thinking</p>
+        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-[#1C1C1A] mb-4">Writing</h2>
+        <p class="text-[#6B6B68] font-light mb-16 max-w-xl">
           Notes on enterprise software, AI implementation, and what it actually takes to ship things that work at scale.
         </p>
         <div class="space-y-0">
           {writing.map((post) => (
             <div class="py-8 border-t border-[#E2E1DC] grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4 items-start">
               <div>
-                <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-black mb-2 leading-snug">
+                <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#1C1C1A] mb-2 leading-snug">
                   {post.title}
                 </h3>
-                <p class="text-sm text-black font-light leading-relaxed">{post.description}</p>
+                <p class="text-sm text-[#6B6B68] font-light leading-relaxed">{post.description}</p>
               </div>
               <div class="flex md:justify-end">
-                <span class="text-xs tracking-widest uppercase font-light text-black border border-[#E2E1DC] px-2 py-1 self-start">
+                <span class="text-xs tracking-widest uppercase font-light text-[#6B6B68] border border-[#E2E1DC] px-2 py-1 self-start">
                   Upcoming
                 </span>
               </div>
@@ -209,21 +209,21 @@ const writing = [
     <!-- Experience: cream panel -->
     <section id="experience" class="bg-[#F9F8F4]/92 backdrop-blur-sm">
       <div class="max-w-5xl mx-auto px-8 py-24">
-        <p class="text-sm tracking-[0.2em] uppercase text-black font-light mb-4">Background</p>
-        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-black mb-16">Experience</h2>
+        <p class="text-xs tracking-[0.2em] uppercase text-[#6B6B68] font-light mb-4">Background</p>
+        <h2 class="font-['Cormorant_Garamond'] text-5xl font-light text-[#1C1C1A] mb-16">Experience</h2>
         <div class="space-y-0">
           {experience.map((job) => (
             <div class="py-10 border-t border-[#E2E1DC] grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6">
               <div class="md:pt-1">
-                <p class="text-xs tracking-wide text-black font-light">{job.period}</p>
+                <p class="text-xs tracking-wide text-[#6B6B68] font-light">{job.period}</p>
               </div>
               <div>
-                <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-black mb-1">{job.company}</h3>
-                <p class="text-sm text-black font-light mb-4">{job.title}</p>
+                <h3 class="font-['Cormorant_Garamond'] text-2xl font-light text-[#1C1C1A] mb-1">{job.company}</h3>
+                <p class="text-sm text-[#6B6B68] font-light mb-4">{job.title}</p>
                 <ul class="space-y-2">
                   {job.highlights.map((h) => (
-                    <li class="text-sm text-black font-light leading-relaxed flex gap-3">
-                      <span class="text-black mt-1.5 shrink-0">—</span>
+                    <li class="text-sm text-[#6B6B68] font-light leading-relaxed flex gap-3">
+                      <span class="text-[#6B6B68] mt-1.5 shrink-0">—</span>
                       {h}
                     </li>
                   ))}
@@ -238,12 +238,12 @@ const writing = [
     <!-- Footer -->
     <footer class="bg-[#F9F8F4]/92 backdrop-blur-sm border-t border-[#E2E1DC]">
       <div class="max-w-5xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <p class="font-['Cormorant_Garamond'] text-xl font-light text-black">Suraj Pabba</p>
-        <div class="flex flex-wrap gap-6 text-sm text-black font-light">
-          <a href="mailto:hello@surajpabba.com" class="hover:text-black transition-colors">Email</a>
-          <a href="https://github.com/suraj-pabba89" target="_blank" class="hover:text-black transition-colors">GitHub</a>
-          <a href="https://linkedin.com/in/surajpabba" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
-          <a href="https://x.com/surajpabba" target="_blank" class="hover:text-black transition-colors">X</a>
+        <p class="font-['Cormorant_Garamond'] text-xl font-light text-[#1C1C1A]">Suraj Pabba</p>
+        <div class="flex flex-wrap gap-6 text-sm text-[#6B6B68] font-light">
+          <a href="mailto:hello@surajpabba.com" class="hover:text-[#1C1C1A] transition-colors">Email</a>
+          <a href="https://github.com/suraj-pabba89" target="_blank" class="hover:text-[#1C1C1A] transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/surajpabba" target="_blank" class="hover:text-[#1C1C1A] transition-colors">LinkedIn</a>
+          <a href="https://x.com/surajpabba" target="_blank" class="hover:text-[#1C1C1A] transition-colors">X</a>
         </div>
       </div>
     </footer>
